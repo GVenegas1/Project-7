@@ -18,7 +18,8 @@ class Node:
 class LinkedList:
     """A linked list class that uses recursion"""
     def __init__(self):
-        self._head = None  #when we first make the list there are no nodes so head is None
+        # when we first make the list there are no nodes so head is None
+        self._head = None
 
 
     def get_head(self):
@@ -142,6 +143,7 @@ class LinkedList:
         return new_head
 
 
+
     def to_plain_list(self):
         """Converts the linked list into a normal python list"""
         #start from the head and let the helper build the list
@@ -154,4 +156,3 @@ class LinkedList:
             return []
         #take this nodes data and put it in a list and adds next node
         return [node.data] + self._list_help(node.next)
-
