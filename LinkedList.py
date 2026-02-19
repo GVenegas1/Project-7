@@ -3,7 +3,7 @@
 #Github:GVenegas1
 #Date: Feb 18,2026
 #Description:This program creates a linked list data structure that can add,
-     #remove,insert,search,and reverse a list of nodes using recursion
+#remove,insert,search,and reverse a list of nodes using recursion
 
 class Node:
     """Represents a single node in the linked list"""
@@ -149,7 +149,7 @@ class LinkedList:
         return self._list_help(self._head)
 
     def _list_help(self, node):
-        """Recursively builds and returns a plain python list"""
+        """Recurs builds and returns a plain python list"""
         if node is None:
             #end of list/return an empty list
             return []
