@@ -18,7 +18,7 @@ class Node:
 class LinkedList:
     """A linked list class that uses recursion"""
     def __init__(self):
-        # when we first make the list there are no nodes so head is None
+        # when we first make the list there are no nodes so head is 'None'
         self._head = None
 
 
@@ -41,7 +41,7 @@ class LinkedList:
             self._head = Node(value)
 
         else:
-            # the list has stuff in it so we need to find the end first
+            # the list has stuff so we need to find the end first
             self._add_help(self._head, value)
 
 
@@ -93,7 +93,7 @@ class LinkedList:
             # this node has the value we are looking for
             return True
 
-        # not found yet so we check the next node by calling the function again
+        #not found yet so we check the next node by calling the function again
         return self._con_help(node.next, value)
 
 
@@ -104,14 +104,13 @@ class LinkedList:
 
 
     def _ins_help(self, node,value, position):
-        """Recursively walks to the right position and inserts there"""
-
+        """Recurs walks to the right position"""
         if position <= 0 or node is None:
+
             #either count down to the right spot or just put it at the end
-
             new_node = Node(value)
-            #the new node points to whatever was here before
 
+            #the new node points to whatever was here before
             new_node.next = node
             return new_node
 
@@ -121,13 +120,13 @@ class LinkedList:
 
 
     def reverse(self):
-        """Reverses the order of the list"""
+        """reverse the order of the list"""
         #the helper gives us back the new head after flipping everything
         self._head = self._rev_help(self._head)
 
 
     def _rev_help(self,node):
-        """Recur reverses the direction of each pointer"""
+        """Recurs reverses the direction of each pointer"""
         if node is None or node.next is None:
             # return if the list is empty or we only have one node
             return node
@@ -139,7 +138,7 @@ class LinkedList:
         node.next.next =node
         node.next= None
 
-        # keep passing the new head all the way back up
+        #keep passing the new head all the way back up
         return new_head
 
 
